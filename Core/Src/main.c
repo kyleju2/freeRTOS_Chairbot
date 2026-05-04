@@ -427,7 +427,7 @@ static void control_task(void *argument)
 		float f_sum = f0 + f1 + f2 + f3;
 
 		if (f_sum < 10000.0f) {
-			printf("V 0.0000 0.0000 0.0000\r\n");
+			printf("0.0000 0.0000 0.0000\r\n");
 			continue;
 		}
 
@@ -464,7 +464,7 @@ static void control_task(void *argument)
 		prev_theta = theta;
 
 		/* Output for ROS/Gazebo */
-		printf("V %.4f %.4f %.4f\r\n", vx, vy, omega);
+		printf("%.4f %.4f %.4f\r\n", vx, vy, omega);
 
 		/* Output raw vs filtered channel data for validation */
 //		printf("C %ld %ld %ld %ld %ld %ld %ld %ld\r\n",
